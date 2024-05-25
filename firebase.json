@@ -1,10 +1,16 @@
 {
   "hosting": {
-    "public": "dist/ecomerce/browser",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   },
   "apiKey": "AIzaSyCk1SK8iP5a9C6JMycBI8bWMsorOB9Y9zE",
