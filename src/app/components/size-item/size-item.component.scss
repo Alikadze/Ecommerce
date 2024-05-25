@@ -1,0 +1,13 @@
+.size {
+  border: 1px solid var(--neutral-black-b100);
+  border-radius: 4px;
+  min-width: 40px;
+  width: min-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 8px;
+
+}

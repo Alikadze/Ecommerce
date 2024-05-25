@@ -1,0 +1,12 @@
+.app-input {
+  width: 320px;
+  height: 45px;
+  display: block;
+
+  &--field {  
+    background-color: var(--neutral-white-w100);
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    padding: 10px 15px;
+  }
+}

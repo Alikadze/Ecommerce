@@ -1,0 +1,19 @@
+.review {
+  border: 1px solid var(--neutral-white-w100);
+  border-radius: 100px;
+  padding: 2px 16px;
+  width: 167px;
+  height: 28px;
+  background: var(--neutral-white-w100);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 200%;
+  text-transform: capitalize;
+  color: var(--neutral-black-b500);
+}

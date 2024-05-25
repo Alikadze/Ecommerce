@@ -1,0 +1,17 @@
+<div
+  class="alert"
+  [ngClass]="{
+    'success': type === 'success',
+    'info': type === 'info',
+    'error': type === 'error',
+  }"
+ >  
+ <div class="alert-icon-main">
+  <div class="alert-icon">
+    <img src="../../../assets/icons/{{icon}}" alt="warning">
+  </div>
+  <div class="alert-message">
+    {{message}}
+  </div>
+ </div>
+</div>

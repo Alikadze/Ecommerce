@@ -1,0 +1,16 @@
+.stock {
+  border: 1px solid var(--neutral-black-b100);
+  border-radius: 100px;
+  padding: 2px 16px;
+  width: 100px;
+  height: 28px;
+  text-align: center;
+
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 12px;
+line-height: 200%;
+color: var(--neutral-black-b500);
+
+  text-transform: uppercase;
+}

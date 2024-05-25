@@ -1,0 +1,27 @@
+<div class="cart-item">
+  <div class="cart-item__poster">
+    @if (product.cover){
+      <img [src]="product.cover"  [width]="80" [height]="80"/>
+    } @else {
+      <img [ngSrc]="'/assets/images/logo.svg'"  [width]="40" [height]="40"/>
+    }
+  </div>
+  <div class="cart-item__info">
+    <div class="title">
+      {{ product.name }}
+    </div>
+    <div class="color_size">
+
+        <div>Color:</div>
+        <div class="color_round" [style.background-color]="product.color.name"></div>
+
+      <div>-</div>
+      <div>
+        Size: <span class="uppercase bold">{{ product.size }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="cart-item__price">
+    {{ product.price | currency:'USD':'$' }}
+  </div>
+</div>

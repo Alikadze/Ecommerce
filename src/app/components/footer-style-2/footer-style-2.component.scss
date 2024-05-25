@@ -1,0 +1,151 @@
+.upper-footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-white-w100);
+  height: 200px;
+  font-family: var(--font-family);
+
+  .upper-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 77%;
+
+    &__left-side {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+
+      &__title {
+        width: 234px;
+        height: 23px;
+        font-weight: 700;
+        color: var(--neutral-black-b900);
+        font-size: var(--font-size-24);
+        line-height: 29px;
+      }
+
+      &__text {
+        color: var(--neutral-black-b500);
+        font-weight: 400;
+        font-size: var(--font-size-14);
+        line-height: 24.5px;
+
+      }
+    }
+
+    &__right-side {
+      display: flex;
+      gap: 15px;
+
+      input {
+        background-color: var(--neutral-white-w100);
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        width: 320px;
+        padding: 10px 15px;  
+      }
+
+      &__button {
+        text-align: center;
+      }
+    }
+
+  }
+}
+
+
+footer {
+  height: 443px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+
+    &__title {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 175%;
+      color: var(--neutral-black-b300);
+    }
+
+
+    &__left {
+      width: 272px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &--text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 175%;
+        color: var(--neutral-black-b500);
+      }
+
+      &--social-medias {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+        img {
+          height: 24px;
+        }
+      }
+    }
+
+    &__center {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 0 100px;
+    }
+
+    &__right {
+      width: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+
+
+      &--payments {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        img {
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  font-family: var(--font-family);
+  font-size: var(--font-size-14);
+  font-weight: 400;
+  line-height: 14px;
+  color: var(--neutral-black-b500);
+
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 20px;
+}

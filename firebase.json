@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/ecomerce/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "apiKey": "AIzaSyCk1SK8iP5a9C6JMycBI8bWMsorOB9Y9zE",
+  "authDomain": "ecommerce-44b58.firebaseapp.com",
+  "databaseURL": "https://ecommerce-44b58-default-rtdb.europe-west1.firebasedatabase.app",
+  "projectId": "ecommerce-44b58",
+  "storageBucket": "ecommerce-44b58.appspot.com",
+  "messagingSenderId": "678637000108",
+  "appId": "1:678637000108:web:17a06d4845b2420c1b1609"
+}

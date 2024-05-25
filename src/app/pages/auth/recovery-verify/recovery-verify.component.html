@@ -1,0 +1,47 @@
+<app-auth-head
+  title="Reset Password"
+/>
+
+<div class="auth-container">
+
+  @if (errorMessage){
+    <app-alert
+      icon="Warning.svg"
+      type="error"
+      [message]="errorMessage"
+    />
+  }
+  @if (successMessage){
+    <app-alert
+      icon="Check.svg"
+      type="success"
+      [message]="successMessage"
+    />
+  }
+
+  <form [formGroup]="form">
+    <app-input
+      label="Password"
+      placeholder="Enter New Password"
+      formControlName="newPassword"
+      type="password"
+    />
+
+    <div class="auth-actions">
+      <button
+      [ngClass]="{
+        'app-button': true,
+        'app-button--primary': true,
+        'app-button--default': true,
+        'app-button--block': true,
+      }"
+      
+        (click)="resetPassword()"
+      >
+        Reset Password
+      </button>
+
+    </div>
+
+  </form>
+</div>

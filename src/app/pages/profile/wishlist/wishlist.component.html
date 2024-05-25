@@ -1,0 +1,23 @@
+@if (wishlists$ | async; as wishlists) {
+  <h2>Wishlists</h2>
+
+  <div class="wishlists">
+
+    @for (wishlist of wishlists; track wishlist.id) {
+      <div class="wishlists__item">
+        <div class="delete-wishlist">
+            <app-button
+                class="delete-wishlist-btn"
+                theme="outline"
+                (click)="deleteWishlist(wishlist)"
+            >
+                <img src="assets/icons/X.svg"/>
+            </app-button>
+        </div>
+        <app-product-item
+          [product]="wishlist.product"
+        />
+      </div>
+    }
+  </div>
+}

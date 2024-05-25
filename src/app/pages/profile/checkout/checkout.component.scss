@@ -1,0 +1,135 @@
+.checkout {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 56px auto;
+
+  &__details {
+    flex: initial;
+    width: 436px;
+    height: 504px;
+    display: block;
+    padding: 24px 16px 24px 64px;
+    border-left: 1px solid var(--neutral-black-b100);
+
+    .in-cart {
+      height: 44px;
+      margin: 64px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__edit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__images {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        &--image {
+          padding: 0px 11px;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          background: var(--neutral-white-w100);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .title {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--neutral-black-b900);
+    }
+
+    .finance-detail {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__checkout {
+    width: 100% !important;
+  }
+
+  &__continue-shopping {
+    margin: 32px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &--link {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 150%;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: var(--neutral-black-b900);
+    }
+  }
+
+  &__list {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+
+    h4 {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--neutral-black-b900);
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+      margin-right: 119px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .one_column {
+        width: 100%;
+      }
+
+      .two_column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+      }
+
+      .personal-info {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+.cover-image {
+  width: 40px;
+  height: 40px;
+}
+
+.checkout__checkout {
+  display: block;
+  width: 100% !important;
+  margin: 0 auto; 
+  text-align: center;
+}

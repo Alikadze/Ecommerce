@@ -1,0 +1,25 @@
+<div [routerLink]="['/product', product?.id]" class="product-item">
+
+  <div class="product-item__image">
+    <img src="https://firebasestorage.googleapis.com/v0/b/ecommerce-44b58.appspot.com/o/products%2Fcloth-6.png?alt=media&token=7e32aef9-11d6-4781-a6a1-9c6cc3a16ad4" alt="Cloth">
+  </div>
+
+  <div class="product-item__info--container">
+
+    <div class="product-item__info--container__name">
+      {{product?.name}}
+    </div>
+
+    <div class="product-item__info--container__more-info">
+
+      <div class="product-item__info--container__more-info--stock">
+        {{product?.inStock | stock}}
+      </div>
+      <div class="product-item__info--container__more-info--price">
+        {{product?.price | currency: 'USD': '$'}}
+      </div>
+
+    </div>
+  </div>
+
+</div>

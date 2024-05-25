@@ -1,0 +1,56 @@
+.main-container {
+  gap: 20px;
+  height: 434px;
+  padding: 16px 8px;
+  font-family: var(--font-family);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .cloth-name {
+      font-size: var(--font-size-14);
+      font-weight: 500;
+      color: var(--neutral-black-b900);
+      line-height: 24.5px;
+    }
+      
+  
+    .cloth {
+      img {
+        width: 237px;
+        height: 302px;
+        border-radius: 4px;
+        background-color: var(--neutral-white-w100);
+      }
+    }
+  
+    .stock-price {
+      display: flex;
+      column-gap: 20px;
+      align-items: end;
+
+      .stock {
+        padding: 6px 16px;
+        width: 91px;
+        height: 28px;
+        font-size: var(--font-size-12);
+        border: 1px solid var(--neutral-black-b200);
+        border-radius: 50px;
+        color: var(--neutral-black-b900);
+        font-weight: 500;
+      }
+
+      .price {
+        margin-top: 5px;
+        color: var(--neutral-black-b600);
+        font-weight: 400;
+        width: 47px;
+        height: 25px;
+      }
+    }
+  
+  }
+}
+

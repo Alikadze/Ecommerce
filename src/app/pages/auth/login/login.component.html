@@ -1,0 +1,61 @@
+<app-auth-head
+  title="Sign In"
+/>
+
+<div class="auth-container">
+
+  @if (errorMessage) {
+    <app-alert
+      icon="Warning.svg"
+      type="error"
+      [message]="errorMessage"  
+    />
+  }
+  @if (successMessage) {
+    <app-alert
+      icon="Check.svg"
+      type="success"
+      [message]="successMessage"  
+    />
+  }
+
+  <form [formGroup]="form">
+    <app-input
+      label="Email"
+      placeholder="Enter Your Email"
+      formControlName="email"
+      type="email"
+    />
+    <app-input
+      label="Password"
+      placeholder="Enter your Password"
+      formControlName="password"
+      type="password"
+    />    
+
+    <div class="recovery">
+      <a routerLink="/auth/recovery">Forgot Password?</a>
+    </div>
+
+    <div class="auth-actions">
+      <button
+      [ngClass]="{
+        'app-button': true,
+        'app-button--primary': true,
+        'app-button--default': true,
+        'app-button--block': true,
+      }"
+      
+        (click)="onSubmit()"
+      >
+        Sign In
+      </button>
+
+    </div>
+
+  </form>
+
+  <div class="more-actions">
+    Don't have an account? <a routerLink="/auth/register"> Sign up</a> 
+  </div>
+</div>

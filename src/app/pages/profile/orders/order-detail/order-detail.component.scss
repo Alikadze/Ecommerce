@@ -1,0 +1,30 @@
+.order {
+  margin-top: 110px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__details {
+    margin-right: 150px;
+    margin-bottom: 80px;
+  }
+
+  &__products {    
+    .products {
+      display: flex;
+      flex-direction: column;
+      margin-right: 150px;
+      gap: 1rem;
+    }
+
+    margin-bottom: 80px;
+  }
+
+  &__shipping {
+    margin-right: 150px;
+    margin-bottom: 100px;
+  }
+}

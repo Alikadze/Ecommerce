@@ -1,0 +1,13 @@
+<div class="quantity-input">
+  <div class="quantity-input__decrease" (click)="decrease()">
+    <img src="../../../assets/icons/Minus.svg" alt="MINUS">
+  </div>
+  
+  <div class="quantity-input__value">
+    <input type="number" [(ngModel)]="quantity">
+  </div>
+  
+  <div class="quantity-input__increase" (click)="increase()">
+    <img src="../../../assets/icons/Add.svg" alt="PLUS">
+  </div>
+</div>

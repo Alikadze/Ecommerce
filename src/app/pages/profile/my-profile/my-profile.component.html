@@ -1,0 +1,6 @@
+@if (user$ | async; as user) {
+  <div>
+    <h1>{{ user.displayName }}</h1>
+    <h3>{{ user.email }}</h3>
+  </div>
+}

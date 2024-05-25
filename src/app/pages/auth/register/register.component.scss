@@ -1,0 +1,16 @@
+.auth-container {
+  width: 300px;
+  min-height: 300px;
+  margin: 128px auto ;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.auth-actions {
+  button {
+    border: none;
+  }
+}

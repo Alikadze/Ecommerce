@@ -1,0 +1,94 @@
+@if (product$ | async; as product) {
+  <app-breadcrumb
+  [currentPage]="product.name"
+  />  
+
+  <div class="product-container">
+    <div class="product-container__images">
+      <img src={{product.cover}} alt="Cloth">
+    </div>
+
+    <div class="product-container__info">
+      <h1>{{product.name}}</h1>
+
+      <div class="product-container__info__stock-reviews">
+
+        <app-review *ngIf="product.reviews" [review]="product?.reviews"/>
+        <app-stock-check [inStock]="product?.inStock"/>
+      
+      </div>
+
+      <div class="product-container__info__price">
+        {{product?.price | currency:'USD':'$'}}
+      </div>
+
+      <div class="product-container__info__colors">
+        <div>Available Color</div>
+          <app-color-item
+            [color]="product.color"
+          />
+      </div>
+
+      <div class="product-container__info__sizes">
+        <div>Available Size</div>
+        <app-size-item
+          [size]="product.size"
+        />
+      </div>
+
+      <div class="product-container__info__quantity">
+        <div>
+          Quantity
+        </div>
+
+        <app-quantity-input
+          [(quantity)]="quantity"
+        />
+      </div>
+
+      <div class="product-container__info__add-to-cart">
+
+        <app-button
+          theme="primary"
+          size="default"
+          (click)="addToCart(product)"
+          class="product-container__info__add-to-cart--cart-btn"
+        >
+          Add to Cart
+        </app-button>
+
+        <button
+          class="product-container__info__add-to-cart--wish-list"
+          (click)="addToWishlist(product)"
+        >
+          <img src="../../../assets/icons/Heart.svg" alt="Heart">
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="product-container__description">
+      <h2>Details</h2>
+  
+      <div [innerHTML]="domSazitizer.bypassSecurityTrustHtml(product.description)"></div>
+    </div>
+
+    <br>
+
+    <div class="product-container__related"> 
+      <h2>Related Products</h2>
+      <div class="products">
+        @for (relatedProduct of relatedProducts$ | async; track relatedProduct.id){
+
+        <app-product-item
+          [product]="relatedProduct"
+        >
+        </app-product-item>
+
+        }
+      </div>
+    </div>
+  </div>
+
+}

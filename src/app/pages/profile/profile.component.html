@@ -1,0 +1,62 @@
+<app-auth-head title="My Account" />
+
+<div class="conatiner my_account">
+  
+  <div class="left">
+
+    <ul class="side-menu">
+
+      <li routerLink="/profile/orders" routerLinkActive="active">
+        <div class="side-menu__icon">
+          <img src="assets/icons/Cart.svg" />
+        </div>
+        <div class="side-menu__name">Orders</div>
+      </li>
+
+      <li routerLink="/profile/wishlist" routerLinkActive="active">
+        <div class="side-menu__icon">
+          <img src="../../../assets/icons/Heart.svg" />
+        </div>
+        <div class="side-menu__name">Wishlist</div>
+      </li>
+
+      <li routerLink="/profile/address" routerLinkActive="active">
+        <div class="side-menu__icon">
+          <img src="../../../assets/icons/Delivery.svg" />
+        </div>
+        <div class="side-menu__name">Address</div>
+      </li>
+
+      <li routerLink="/profile/password" routerLinkActive="active">
+        <div class="side-menu__icon">
+          <img src="assets/icons/Key.svg" />
+        </div>
+        <div class="side-menu__name">Change Password</div>
+      </li>
+
+      <li routerLink="/profile/myProfile" routerLinkActive="active">
+        <div class="side-menu__icon">
+          <img src="assets/icons/User.svg"/>
+        </div>
+        <div class="side-menu__name">Account Details</div>
+      </li>
+
+      <li id="logOut" routerLinkActive="active" (click)="Logout()">
+        <div class="side-menu__icon">
+          <img src="assets/icons/Logout.svg" />
+        </div>
+        <div class="side-menu__name">Log Out</div>
+      </li>
+
+
+    </ul>
+
+  </div>
+
+<div class="vertical-line"></div>
+
+  <div class="right">
+    <router-outlet />
+  </div>
+
+</div>

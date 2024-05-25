@@ -1,0 +1,54 @@
+<app-auth-head
+  title="Sign Up"
+/>
+
+<div class="auth-container">
+  @if (errorMessage) {
+    <app-alert
+      icon="Warning.svg"
+      type="error"
+      [message]="errorMessage"  
+    />
+  }
+
+  @if (successMessage) {
+    <app-alert
+      icon="Check.svg"
+      type="success"
+      [message]="successMessage"  
+    />
+  }
+
+  <form [formGroup]="form">
+    <app-input
+      label="Email"
+      placeholder="Enter Your Email"
+      formControlName="email"
+      type="email"
+    />
+    <app-input
+      label="Password"
+      placeholder="Enter your Password"
+      formControlName="password"
+      type="password"
+    />    
+
+    <div class="auth-actions">
+      <button
+      [ngClass]="{
+        'app-button': true,
+        'app-button--primary': true,
+        'app-button--default': true,
+        'app-button--block': true,
+      }"
+      
+        (click)="onSubmit()"
+      >
+        Sign Up
+      </button>
+
+    </div>
+
+  </form>
+
+</div>

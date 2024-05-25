@@ -1,0 +1,122 @@
+<app-auth-head
+  title="Checkout"
+/>
+
+<div class="container checkout">
+
+  <div class="checkout__list">
+    <h4>Shipping Address</h4>
+
+    <form [formGroup]="form">
+      <div class="one_column">
+        <app-input
+          label="Street Address"
+          formControlName="street"
+          placeholder="Street Address"
+
+        />
+      </div>
+
+      <div class="two_column">
+        <app-input
+          label="City"
+          formControlName="city"
+          placeholder="City"
+        />
+        <app-input
+          label="State"
+          formControlName="state"
+          placeholder="State (Optional)"
+        />
+      </div>
+
+      <div class="two_column">
+        <app-input
+          label="Zip Code"
+          formControlName="zipCode"
+          placeholder="Zip Code"
+        />
+        <app-input
+          label="Country"
+          formControlName="country"
+          placeholder="Country"
+        />
+      </div>
+
+      <div class="two_column personal-info">
+        <app-input
+          label="Email"
+          formControlName="email"
+          placeholder="Email"
+        />
+        <app-input
+          label="Full name"
+          formControlName="fullName"
+          placeholder="Full name"
+        />
+      </div>
+    </form>
+  </div>
+  <div class="checkout__details">
+    <div class="title">
+      Your Order
+    </div>
+
+    <div class="in-cart">
+      <div class="in-cart__images">
+        @for (cart of carts$ | async; track cart){
+          <div class="in-cart__images--image">
+            @if (cart.cover) {
+            <img class="cover-image" [src]="cart.cover"  width="24px">
+            } @else {
+            <img class="cover-image" [src]="'/assets/images/logo.svg'"  width="24px">
+            }
+          </div>
+        }
+      </div>
+
+      <app-button
+        class="in-cart__edit"
+        theme="outline"
+        [disabled]="(sum$ | async) === 0"
+        routerLink="/profile/cart"
+      >Edit Cart</app-button>
+    </div>
+
+    <div class="finance-detail">
+      <app-key-value
+        key="Subtotal"
+        [value]="((sum$ | async) || 0) | currency:'USD':'$'"
+      />
+      <app-key-value
+        key="Shipping:"
+        value="Free"
+      />
+      <app-key-value
+        key="Tax:"
+        [value]="((sum$ | async) || 0) * cartFacade.feePercentage | currency:'USD':'$'"
+      />
+
+      <div class="divider"></div>
+
+      <app-key-value
+        key="Total:"
+        [value]="(total$ | async) | currency:'USD':'$'"
+      />
+    </div>
+
+    <app-button
+      class="checkout__checkout"
+      alte-button
+      block
+      [disabled]="(sum$ | async) === 0"
+      (click)="checkout()"
+    >
+      Place Order
+    </app-button>
+
+    <div class="checkout__continue-shopping">
+      <a class="checkout__continue-shopping--link" routerLink="/">Continue Shopping</a>
+    </div>
+  </div>
+</div>

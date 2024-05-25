@@ -1,0 +1,56 @@
+.app-button {
+  border-radius: var(--border-radius-4);
+  font-family: var(--font-family);
+  font-size: var(--font-size-14);
+  font-weight: 500;
+  cursor: pointer;
+  gap: 6px;
+  outline: none;
+
+  &--default {
+    width: 133px;
+    height: 44px;
+    padding: 12px 24px;
+  }
+
+  &--small {
+    height: 40px;
+    width: 125px;
+    padding: 12px 20px;
+  }
+
+  &--primary {
+    background: var(--neutral-black-b900);
+    color: var(--neutral-white-w900);
+
+    &:hover {
+      background: var(--neutral-black-b800);
+    }
+  }
+
+  &--outline {
+    background: var(--neutral-white-w900);
+    border: 1px solid var(--neutral-black-b200);
+    color: var(--neutral-black-b500);
+
+    &:hover {
+      background: var(--neutral-white-w200);
+    }
+  }
+
+  &--white {
+    background: var(--neutral-white-w900);
+    border: 0;
+    color: var(--neutral-black-b900);
+  }
+
+  &--outline-black {
+    background: var(--neutral-white-w900);
+    border: 1px solid var(--neutral-black-b900);
+    color: var(--neutral-black-b900);
+  }
+
+  &--block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,76 @@
+@import "colors";
+@import "typography";
+@import "spacing";
+@import "shadows";
+
+@import "components/component";
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 1116px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container--fluid {
+  width: 100%;
+  padding: 0 16px;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__brand {
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.04em;
+    text-transform: capitalize;
+    color: var(--neutral-black-b900);
+  }
+}
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--neutral-black-b100);
+  margin: 16px 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}

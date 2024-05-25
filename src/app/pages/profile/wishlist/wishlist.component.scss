@@ -1,0 +1,29 @@
+.wishlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+
+  margin: 0 auto;
+
+
+  &__item {
+    position: relative;
+    width: 240px;
+
+
+    .delete-wishlist {
+      position: absolute;
+      top: 17px;
+      right: -8px;
+    }
+  }
+}
+
+h2 {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  display: block;
+  text-transform: uppercase;
+}

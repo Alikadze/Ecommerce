@@ -1,0 +1,26 @@
+.container {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    color: var(--neutral-white-w100);
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-size: var(--font-size-16);
+    color: var(--neutral-black-b800);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .text {
+    width: 272px;
+    color: var(--neutral-black-b500);
+    font-size: var(--font-size-14);
+  }
+}
+

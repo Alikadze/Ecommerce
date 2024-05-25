@@ -1,0 +1,48 @@
+<div class="header">
+  Shipping Address
+</div>
+
+<form [formGroup]="form">
+
+  <app-input
+  class="input-1"
+  label="Street Address"
+  placeholder="Street Address"
+  formControlName="streetAddress"
+  />
+  <div class="input-container">
+    <app-input
+    class="input-2"
+    label="City"
+    placeholder="City"
+    formControlName="city"
+    />
+  
+    <app-input
+    class="input-3"
+    label="State"
+    placeholder="State"
+    formControlName="state"
+    />
+  
+    <app-input
+    class="input-4"
+    label="Zip Code"
+    placeholder="Zip Code"
+    formControlName="zipCode"
+    />
+  
+    <app-input
+    class="input-5"
+    label="Counrty"
+    placeholder="Counrty"
+    formControlName="country"
+    />
+
+    <app-button>
+      Save Changes
+    </app-button>
+
+  </div>
+  
+</form>

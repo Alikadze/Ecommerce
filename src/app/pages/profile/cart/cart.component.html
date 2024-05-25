@@ -1,0 +1,62 @@
+<app-auth-head title="My Cart"></app-auth-head>
+
+<div class="container cart">
+  <div class="cart__list">
+    <h4>Your cart</h4>
+    <div class="divider"></div>
+    @for(cart of carts$ | async; track cart) {
+      <app-cart-item
+        [product]="cart"
+        (remove)="removeFromCart($event)"
+        (update)="updateToCart($event)"
+      ></app-cart-item>
+    } @empty {
+      <div class="empty-cart">
+        Your cart is empty
+      </div>
+    }
+  </div>
+  <div class="cart__details">
+    <div class="title">
+      Order Summary
+    </div>
+
+    <div class="finance-detail">
+      <app-key-value
+        key="Subtotal"
+        [value]="((sum$ | async) || 0) | currency:'USD':'$'"
+      ></app-key-value>
+      <app-key-value
+        key="Shipping:"
+        value="Free"
+      ></app-key-value>
+      <app-key-value
+        key="Tax:"
+        [value]="(tax$ | async) | currency:'USD':'$'"
+      ></app-key-value>
+
+      <div class="divider"></div>
+
+      <app-key-value
+        key="Total:"
+        [value]="(total$ | async) | currency:'USD':'$'"
+      ></app-key-value>
+    </div>
+
+    <div class="cart__checkout">
+      <app-button
+        class="cart__checkout"
+        [block]="true"
+        style="width: 100%;"
+        [disabled]="(sum$ | async) === 0"
+        (click)="checkout()"
+      >
+        Checkout
+      </app-button>
+    </div>
+
+    <div class="cart__continue-shopping">
+      <a class="cart__continue-shopping--link" routerLink="/">Continue Shopping</a>
+    </div>
+  </div>
+</div>

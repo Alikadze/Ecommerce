@@ -1,0 +1,63 @@
+<app-breadcrumb hasBackground currentPage="Search"></app-breadcrumb>
+
+<div class="container category">
+  <div class="category__side">
+    <div class="category__side--filter">
+      <app-filter-card name="Categories">
+        <div class="category-filter">
+          @for (category of categories$ | async; track category.id) {
+            <app-filter-card-checkbox-item
+              [category]="category"
+              [active]="selectedCategories.has(category.id)"
+              (checked)="onCategoryChecked($event)"
+            ></app-filter-card-checkbox-item>
+            <hr class="separate-line">
+          }
+        </div>
+      </app-filter-card>
+
+      <app-filter-card name="Color">
+        <div class="color-list filter-color-content">
+          @for (color of colors$ | async; track color.id) {
+            <app-color-item
+              [color]="color"
+              [active]="color.id === selectedColor"
+              (selected)="selectColor($event)"
+            ></app-color-item>
+          }
+        </div>
+      </app-filter-card>
+
+      <app-filter-card name="Size">
+        <div class="size-list filter-color-content">
+          @for (size of sizes; track size) {
+            <div
+              class="size"
+              [class.active]="size === selectedSize"
+              (click)="selectSize(size)"
+            >
+              {{size}}
+            </div>
+          }
+        </div>
+      </app-filter-card>
+    </div>
+  </div>
+  <div class="category--content">
+    <div class="active-filters"></div>
+    <div class="products-info"></div>
+    @if (products$ | async; as products) {
+      <div class="products">
+        @for (product of products || []; track product.id) {
+          <app-product-item [product]="product"></app-product-item>
+        }
+      </div>
+
+      @if (products.length === 0) {
+        <div class="no-products">
+          No products found
+        </div>
+      }
+    }
+  </div>
+</div>
