@@ -1,27 +1,33 @@
-# Ecomerce
+# E-commerce App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.4.
+Welcome to the E-commerce App! This is a fully functional e-commerce application built with Angular for the frontend and Firebase for the backend.
 
-## Development server
+## Live Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Check out the live demo of the application [here](https://ecommerce-44b58.web.app/).
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- User Authentication (Sign Up, Log In, Log Out)
+- Product Listings
+- Product Search
+- Shopping Cart
+- Order Management
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Frontend:** Angular
+- **Backend:** Firebase
+  - Authentication
+  - Firestore Database
+  - Hosting
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run this project locally, follow these steps:
 
-## Running end-to-end tests
+1. **Clone the repository:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   git clone https://github.com/Alikadze/Ecommerce.git
+   cd Ecommerce
