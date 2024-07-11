@@ -9,7 +9,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
   imports: [
     RouterOutlet,
     NzDropDownModule,
-    NzMenuModule
+    NzMenuModule  
   ],
   template: '<router-outlet>',
 })

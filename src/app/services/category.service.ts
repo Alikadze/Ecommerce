@@ -15,5 +15,4 @@ export class CategoryService extends ApiService {
   getCategoryById(id: string) {
     return this.get<FirebaseDocument<Category>[]>(`categories/${id}.json`)
   }
-  
 }

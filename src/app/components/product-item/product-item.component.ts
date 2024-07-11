@@ -1,8 +1,9 @@
-import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, inject } from '@angular/core';
 import { Product } from '../../core/interfaces/product';
 import { CurrencyPipe } from '@angular/common';
 import { StockPipe } from '../../core/pipes/stock.pipe';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-product-item',
@@ -18,5 +19,6 @@ import { RouterLink } from '@angular/router';
 export class ProductItemComponent{
   @Input() product!: Product | null;
 
-    
+  route = inject(ActivatedRoute);
+
 }

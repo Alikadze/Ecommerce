@@ -1,6 +1,8 @@
 footer {
   height: 443px;
   background: var(--neutral-white-w100);
+  width: auto !important;
+  overflow: hidden;
 
   display: flex;
   justify-content: space-around;

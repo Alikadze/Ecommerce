@@ -1,68 +1,70 @@
-<app-hero-banner/>
+<div class="main-container">
+  <app-hero-banner/>
 
-<div class="feature-container">
-  <div class="features">
-    @for (links of featuesMenu; track links) {
-      <app-feature-links-item class="features__links"
-        [icon]="links.icon"
-        [title]="links.title"
-        [text]="links.text"
-      />
-    }
+  <div class="feature-container">
+    <div class="features">
+      @for (links of featuesMenu; track links) {
+        <app-feature-links-item class="features__links"
+          [icon]="links.icon"
+          [title]="links.title"
+          [text]="links.text"
+        />
+      }
+    </div>
   </div>
-</div>
-
-<div class="products-container">
-  <div class="products-container__info">
-    <div class="products-container__info__1">SHOP NOW</div>
-    <div class="products-container__info__2">Best Selling</div>
-  </div>
-
-  <div class="products-container__container">
-    @for (item of bestSeller; track item) {
-      <app-best-selling-items class="products-container__container__items"
-        [cloth]="item.cloth"
-        [name]="item.name"
-        [stock]="item.stock"
-        [price]="item.prise"
-      />
-    }
-  </div>
-</div>
-
-
-<div class="fashion-container-main">
-  <div class="fashion-container">
-    <div class="fashion-container__left-side">
-      <div class="fashion-container__left-side__title">Browse Our Fashion Paradise!</div>
-      <div class="fashion-container__left-side__text">Step into a world of style and explore our diverse collection of clothing categories.</div>
-      <div class="fashion-container__left-side__Browse-button">
-        <app-button theme="primary" size="default">Start Browsing &#8594;</app-button>
-      </div>
+  
+  <div class="products-container">
+    <div class="products-container__info">
+      <div class="products-container__info__1">SHOP NOW</div>
+      <div class="products-container__info__2">Best Selling</div>
     </div>
   
-    <div class="fashion-container__right-side">
-      <img src="../../../assets/cloth/cloth-5.png" alt="cloth">
-    </div>
-  </div>
-</div>
-
-
-<div class="product-list-main">
-  <div class="product-list">
-    <div class="product-list__buttons">
-      <div class="product-list__buttons__featured">Featured</div>
-      <div class="product-list__buttons__latest">Latest</div>
-    </div>
-  
-    <div class="product-list__items">
-      @for (item of productList; track item) {
+    <div class="products-container__container">
+      @for (item of bestSeller; track item) {
         <app-best-selling-items class="products-container__container__items"
           [cloth]="item.cloth"
           [name]="item.name"
           [stock]="item.stock"
           [price]="item.prise"
         />
-      }  </div>
+      }
+    </div>
   </div>
+  
+  
+  <div class="fashion-container-main">
+    <div class="fashion-container">
+      <div class="fashion-container__left-side">
+        <div class="fashion-container__left-side__title">Browse Our Fashion Paradise!</div>
+        <div class="fashion-container__left-side__text">Step into a world of style and explore our diverse collection of clothing categories.</div>
+        <div class="fashion-container__left-side__Browse-button">
+          <app-button theme="primary" size="default">Start Browsing &#8594;</app-button>
+        </div>
+      </div>
+    
+      <div class="fashion-container__right-side">
+        <img src="../../../assets/cloth/cloth-5.png" alt="cloth">
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="product-list-main">
+    <div class="product-list">
+      <div class="product-list__buttons">
+        <div class="product-list__buttons__featured">Featured</div>
+        <div class="product-list__buttons__latest">Latest</div>
+      </div>
+    
+      <div class="product-list__items">
+        @for (item of productList; track item) {
+          <app-best-selling-items class="products-container__container__items"
+            [cloth]="item.cloth"
+            [name]="item.name"
+            [stock]="item.stock"
+            [price]="item.prise"
+          />
+        }  </div>
+    </div>
+  </div>  
 </div>
